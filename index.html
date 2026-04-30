@@ -143,6 +143,21 @@ body {
   letter-spacing:.08em;
   margin-bottom:clamp(2px,.8vw,5px);
 }
+.product-code {
+  display:inline-block;
+  margin:0 0 clamp(6px,1.4vw,10px);
+  padding:clamp(3px,.8vw,6px) clamp(10px,2.5vw,16px);
+  border-radius:999px;
+  background:linear-gradient(135deg,#fffdf5,#f4dfa2);
+  border:1px solid rgba(201,164,90,.75);
+  color:var(--navy);
+  font-size:clamp(14px,3.7vw,20px);
+  font-weight:900;
+  letter-spacing:.04em;
+  line-height:1.25;
+  box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
 h2 {
   margin:0 0 clamp(3px,.9vw,7px);
   color:var(--navy);
@@ -182,7 +197,7 @@ p, .phone {
 }
 .phone::before {
   content:"☎ ";
-  color:var(--gold);
+  color:#d60000;
 }
 .phone:active {
   color:var(--navy);
@@ -223,12 +238,23 @@ p, .phone {
   }
 }
 @media (max-width:360px) {
+
+  .product-code {
+    font-size:clamp(13px,3.6vw,17px);
+    padding:3px 10px;
+  }
   .top-title { font-size:clamp(16px,5vw,22px); }
   .brand-name { font-size:clamp(16px,4.8vw,20px); }
   h2,.phone-label { font-size:clamp(15px,4.3vw,18px); }
   p,.phone { font-size:clamp(13px,3.8vw,16px); }
 }
 @media (orientation:landscape) and (max-height:700px) {
+
+  .product-code {
+    font-size:15px;
+    padding:3px 9px;
+    margin-bottom:3px;
+  }
   body { align-items:start; padding:10px; }
   .page { width:min(100%, 1050px); }
   .top-title {
@@ -318,6 +344,7 @@ p, .phone {
       <div class="row">
         <div class="icon">◆</div>
         <div>
+          <div class="product-code">[LH-277]</div>
           <div class="kicker">DIRECTOR</div>
           <h2>개발 책임자</h2>
           <p>채일규 개발 제3 의학자</p>
